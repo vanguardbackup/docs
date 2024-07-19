@@ -10,6 +10,9 @@ export default defineConfig({
     logo: '/logo.svg',
     siteTitle: false,
     logoLink: '/',
+    sitemap: {
+      hostname: 'https://docs.vanguardbackup.com'
+    },
     search: {
       provider: 'local',
     },
