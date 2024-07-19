@@ -2,6 +2,9 @@
 
 Welcome to the official documentation for Vanguard, an open-source backup tool.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/vanguardbackup/assets/main/screenshots/backup-tasks.png" width="900" alt="Screenshot"></p>
+
 ## Getting Started
 
 If you're new to Vanguard and looking for installation instructions, please check our [Installation Guide](/installation).
