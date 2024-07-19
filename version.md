@@ -1,0 +1,53 @@
+# Vanguard Version Checking
+
+Keeping your Vanguard installation up-to-date is crucial for ensuring optimal performance, security, and access to the latest features. This guide explains how to check your Vanguard version and verify if updates are available.
+
+## Checking Your Current Version
+
+To determine which version of Vanguard you are currently running, use the following Artisan command in your terminal:
+
+```bash
+php artisan vanguard:version
+```
+
+This command will display your current Vanguard version number.
+
+## Checking for Updates
+
+Vanguard provides an easy way to check if a newer version is available. Simply add the `--check` parameter to the version command:
+
+```bash
+php artisan vanguard:version --check
+```
+
+This command will:
+1. Display your current Vanguard version
+2. Check Vanguard's repository for the latest release
+3. Inform you if a newer version is available
+
+### Example Output
+
+```
+Current Vanguard version: 3.2.1
+
+Checking for updates...
+
+A new version of Vanguard is available!
+Latest version: 3.3.0
+
+To update, please refer to the "Updating Vanguard" section in the installation guide.
+```
+
+::: tip
+We recommend regularly checking for updates to ensure you're benefiting from the latest features, performance improvements, and security patches.
+:::
+
+::: warning
+Before updating, always review the changelog and backup your project to prevent any potential data loss.
+:::
+
+## Updating Vanguard
+
+If you find that a new version is available, please refer to the "Updating Vanguard" section in the main installation guide for detailed update instructions.
+
+Remember to always back up your data and review the changelog before performing any updates to ensure a smooth upgrade process.
