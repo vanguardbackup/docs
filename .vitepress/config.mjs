@@ -1,18 +1,24 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Vanguard Documentation",
   description: "Documentation for the Vanguard Backup tool.",
   base: "/",
-  outDir: 'dist', // Explicitly set the output directory
+  outDir: 'dist',
   lastUpdated: true,
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    logo: '/logo.svg',
+    siteTitle: false,
+    logoLink: '/',
+    search: {
+      provider: 'local',
+    },
+    editLink: {
+      pattern: 'https://github.com/vanguardbackup/docs/edit/main/:path'
+    },
     nav: [
       { text: 'Welcome', link: '/' },
     ],
-
     sidebar: [
       {
         text: 'Getting Started',
@@ -44,16 +50,23 @@ export default defineConfig({
       {
         text: 'Development',
         items: [
-          {
-            text: 'Development Details', link: '/development',
-          }
+          { text: 'Development Details', link: '/development' },
         ],
       }
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vanguardbackup/vanguard' },
       { icon: 'github', link: 'https://github.com/vanguardbackup/docs' }
     ]
+  },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag.includes('-')
+      }
+    }
+  },
+  optimizeDeps: {
+    exclude: ['vue']
   }
 })
