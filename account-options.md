@@ -23,15 +23,6 @@ Your Vanguard account options allow you to personalize your experience and manag
 2. Click on your profile icon or name in the top-right corner
 3. Select "Account Settings" from the dropdown menu
 
-## Best Practices
-
-- Regularly review and update your account information
-- Use a strong, unique password and change it periodically
-- Keep your email address current to ensure you receive important notifications
-- Set your correct timezone for accurate backup scheduling
-
 ::: tip
 Remember to save your changes after making any updates to your account options.
 :::
-
-For any issues or questions about your account options, please contact our support team.

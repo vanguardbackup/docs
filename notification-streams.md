@@ -24,9 +24,3 @@ When creating or updating a Backup Task, you can select which Notification Strea
 ::: info Note
 Regardless of your chosen Notification Streams, you will always receive backup failure notifications to your account's registered email address. This ensures you never miss critical alerts about your backups.
 :::
-
-## Best Practices
-
-- Use multiple Notification Streams for redundancy
-- Regularly verify that your configured streams are working correctly
-- Keep your notification settings up-to-date

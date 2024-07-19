@@ -28,4 +28,4 @@ Use the sidebar to navigate through our documentation and learn about Vanguard's
 - Notification Streams
 - And more!
 
-Thank you for choosing Vanguard for your backup needs. We're excited to help you keep your data safe and secure!
+Thank you for choosing Vanguard. We're excited to help you keep your data safe and secure!

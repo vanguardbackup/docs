@@ -26,11 +26,5 @@ Once a tag is applied, a distinctive icon will appear on the Backup Task, provid
 - Improved organization of Backup Tasks
 - Quick visual identification of task categories
 - Easier filtering and searching of tasks
-
-## Best Practices
-
-- Use clear, descriptive names for your tags
-- Be consistent in your tagging strategy
-- Regularly review and update your tags as your backup needs evolve
-
+- 
 As this feature continues to develop, we'll provide updates on any new functionality or improvements.

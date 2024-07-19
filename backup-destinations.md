@@ -27,5 +27,3 @@ Vanguard currently supports three types of Backup Destinations:
 5. Save your configuration.
 
 Note: When creating a backup task using a local destination, you'll specify the exact destination path as part of the task setup.
-
-For more detailed instructions, refer to our documentation or contact support.
