@@ -21,7 +21,7 @@ Your Vanguard account options allow you to personalize your experience and manag
 
 1. Log into your Vanguard account
 2. Click on your profile icon or name in the top-right corner
-3. Select "Account Settings" from the dropdown menu
+3. Select "Profile" from the dropdown menu
 
 ::: tip
 Remember to save your changes after making any updates to your account options.

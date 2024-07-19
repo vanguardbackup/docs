@@ -25,10 +25,7 @@ php artisan vanguard:version --check
 
 ![A screenshot of the version check terminal command output](/images/terminal-version-check-screenshot.png)
 
-This command will:
-1. Display your current Vanguard version
-2. Check Vanguard's repository for the latest release
-3. Inform you if a newer version is available
+This command will inform you if a newer version is available.
 
 ::: tip
 We recommend regularly checking for updates to ensure you're benefiting from the latest features, performance improvements, and security patches.
