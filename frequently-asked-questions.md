@@ -40,9 +40,6 @@ No, Vanguard only accesses your server when executing scheduled or manual backup
 
 ## Troubleshooting
 
-### What should I do if I can't connect to my remote server?
-Check our [troubleshooting guide](/troubleshooting) for steps to resolve connection issues. Common solutions include verifying SSH credentials and checking firewall settings.
-
 ### How can I view logs of backup operations?
 Backup logs are available in the Vanguard dashboard. Navigate to the specific backup task to view its execution history and logs.
 
