@@ -26,9 +26,6 @@ Vanguard allows you to remove your account if needed. However, it's important to
     - Manually remove Vanguard's SSH keys from all your servers.
     - Verify that no scheduled Vanguard tasks are running on your systems.
 
-## How to Remove Your Account
-
-[Include steps to remove account here, e.g., navigating to account settings, confirmation process, etc.]
 
 ::: warning
 Account removal is irreversible. Make sure you want to proceed before confirming the removal.

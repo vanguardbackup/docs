@@ -14,6 +14,7 @@ We value your input and are here to help:
 
 - **Issue Reporting**: Encountered a problem? Please open an [issue on GitHub](https://github.com/vanguardbackup/vanguard/issues/new/choose).
 
+- **Security Disclosure**: If you have a security concern, please follow the instructions [here](https://github.com/vanguardbackup/vanguard/blob/main/SECURITY.md).
 ## Explore Vanguard
 
 Use the sidebar to navigate through our documentation and learn about Vanguard's features, including:

@@ -19,20 +19,18 @@ Remote Servers in Vanguard are the data sources for your backups. Proper setup e
 1. Navigate to Remote Servers in your Vanguard dashboard
 2. Click "Add New Server"
 3. Enter the following details:
-    - Server name (for easy identification)
-    - IP address or hostname
-    - SSH username (non-root recommended)
-    - SSH port (default is 22)
+   - Server name (for easy identification)
+   - IP address or hostname
+   - SSH username (non-root recommended)
+   - SSH port (default is 22)
 4. For database backups:
-    - Provide the database password (securely encrypted)
+   - Provide the database password (securely encrypted)
 5. Run a connection test
 6. Save your configuration
 
-## Best Practices
+## Server Health Checks
 
-- Use SSH key authentication when possible
-- Keep SSH credentials in Vanguard up-to-date
-- Configure your firewall to allow Vanguard's IP addresses
+Vanguard automatically performs periodic health checks to ensure continuous connectivity with your remote servers. These checks help maintain the reliability of your backups by detecting potential issues early.
 
 ## Connection Troubleshooting
 

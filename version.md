@@ -25,19 +25,6 @@ This command will:
 2. Check Vanguard's repository for the latest release
 3. Inform you if a newer version is available
 
-### Example Output
-
-```
-Current Vanguard version: 3.2.1
-
-Checking for updates...
-
-A new version of Vanguard is available!
-Latest version: 3.3.0
-
-To update, please refer to the "Updating Vanguard" section in the installation guide.
-```
-
 ::: tip
 We recommend regularly checking for updates to ensure you're benefiting from the latest features, performance improvements, and security patches.
 :::
@@ -48,6 +35,6 @@ Before updating, always review the changelog and backup your project to prevent 
 
 ## Updating Vanguard
 
-If you find that a new version is available, please refer to the "Updating Vanguard" section in the main installation guide for detailed update instructions.
+If you find that a new version is available, please refer to the ["Updating Vanguard"](https://docs.vanguardbackup.com/installation#updating-vanguard) section in the main installation guide for detailed update instructions.
 
 Remember to always back up your data and review the changelog before performing any updates to ensure a smooth upgrade process.

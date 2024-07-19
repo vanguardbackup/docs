@@ -191,8 +191,7 @@ After bumping the version:
 4. Tag the release with the new version number (e.g., v1.2.3).
 5. Title the release with the version number.
 6. In the description, detail the changes, new features, and any breaking changes.
-7. If applicable, attach any compiled assets or binaries.
-8. Publish the release.
+7. Publish the release.
 
 ::: tip
 Before creating a release, ensure all tests pass and the changelog is up-to-date. Consider creating a release candidate for major updates to allow for community testing.

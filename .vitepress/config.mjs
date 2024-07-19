@@ -18,7 +18,8 @@ export default defineConfig({
         items: [
           { text: 'Welcome', link: '/' },
           { text: 'Installation', link: '/installation' },
-          { text: 'Version Management', link: '/version' }
+          { text: 'Version Management', link: '/version' },
+          { text: 'Commands', link: '/commands' },
         ]
       },
       {
@@ -50,7 +51,8 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vanguardbackup/vanguard' }
+      { icon: 'github', link: 'https://github.com/vanguardbackup/vanguard' },
+      { icon: 'github', link: 'https://github.com/vanguardbackup/docs' }
     ]
   }
 })

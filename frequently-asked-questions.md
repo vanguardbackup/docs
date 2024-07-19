@@ -28,8 +28,7 @@ You can schedule backups at any frequency using cron expressions, from every min
 Yes, Vanguard supports backing up MySQL and PostgreSQL databases.
 
 ### What happens if a backup fails?
-If a backup fails, Vanguard will send a notification (if configured) and log the failure. You can review the logs and attempt the backup again manually if needed.
-
+If a backup fails, Vanguard will notify you via your account's registered email address and any configured Notification Streams, log the failure, and allow you to review the logs and manually retry the backup if needed.
 ## Security
 
 ### Is my data encrypted during backups?
@@ -41,7 +40,7 @@ No, Vanguard only accesses your server when executing scheduled or manual backup
 ## Troubleshooting
 
 ### How can I view logs of backup operations?
-Backup logs are available in the Vanguard dashboard. Navigate to the specific backup task to view its execution history and logs.
+Backup logs are available in the Vanguard dashboard. Navigate to the backup tasks page to view all the logs.
 
 ## Account Management
 
@@ -57,6 +56,6 @@ Yes, you can remove your account. Please refer to our [Account Removal](/account
 We welcome contributions! Please check our [Development Guide](/development) for information on how to contribute code, report issues, or suggest improvements.
 
 ### Is there an API available for Vanguard?
-Currently, Vanguard does not offer a public API. For the latest information on available features, please check our documentation or GitHub repository.
+Currently, Vanguard does not offer an API.
 
-If you have a question that's not answered here, please don't hesitate to reach out to our support team or community forums.
+If you have a question that's not answered here, please make a post on our [GitHub Discussions page](https://github.com/vanguardbackup/vanguard/discussions).
