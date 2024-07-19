@@ -13,7 +13,7 @@ php artisan vanguard:version
 This command will display your current Vanguard version.
 
 
-![A screenshot of the version terminal command](./images/terminal-version-screenshot.png)
+![A screenshot of the version terminal command](/images/terminal-version-screenshot.png)
 
 ## Checking for Updates
 
@@ -23,7 +23,7 @@ Vanguard provides an easy way to check if a newer version is available. Simply a
 php artisan vanguard:version --check
 ```
 
-![A screenshot of the version check terminal command output](./images/terminal-version-check-screenshot.png)
+![A screenshot of the version check terminal command output](/images/terminal-version-check-screenshot.png)
 
 This command will:
 1. Display your current Vanguard version
