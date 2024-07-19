@@ -216,7 +216,7 @@ A link to this GitHub repository can be found [here](https://github.com/vanguard
 
 ## Getting Help
 
-- Check our [FAQ](/faq) for common questions.
+- Check our [FAQ](/frequently-asked-questions) for common questions.
 - Open an issue on GitHub for bugs or feature requests.
 - Join our community discussions for general questions.
 
