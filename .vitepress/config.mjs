@@ -6,6 +6,7 @@ export default defineConfig({
   description: "Documentation for the Vanguard Backup tool.",
   base: "/",
   outDir: 'dist', // Explicitly set the output directory
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
