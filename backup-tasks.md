@@ -43,13 +43,6 @@ Vanguard offers an intuitive, step-by-step process for creating Backup Tasks:
    - Review your settings and save the backup task
    - You'll be redirected to the backup tasks overview, where you can run the task immediately if desired
 
-## Best Practices
-
-- Prioritize critical data for backup
-- Regularly test your backups by attempting to restore from them
-- Monitor task execution using Vanguard's dashboard
-- Use descriptive labels and tags for efficient management of multiple backup tasks
-
 ## Managing Backup Tasks
 
 ### Paused Backups
@@ -63,8 +56,3 @@ A log is created for every backup task execution, regardless of its outcome, pro
 After creating a Backup Task:
 - Run the task manually to verify its configuration
 - Monitor its execution in the Vanguard dashboard
-- Set up additional tasks for other important data
-
-::: tip
-Regularly review and update your backup strategies to ensure they continue to meet your evolving needs.
-:::

@@ -53,7 +53,7 @@ Yes, you can remove your account. Please refer to our [Account Removal](/account
 ## Development and Contribution
 
 ### How can I contribute to Vanguard?
-We welcome contributions! Please check our [Development Guide](/development) for information on how to contribute code, report issues, or suggest improvements.
+We welcome contributions! Please check our [Development Guide](/development-handbook) for information on how to contribute code, report issues, or suggest improvements.
 
 ### Is there an API available for Vanguard?
 Currently, Vanguard does not offer an API.

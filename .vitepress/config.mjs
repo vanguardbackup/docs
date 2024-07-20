@@ -51,9 +51,11 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Development',
+        text: 'Development Resources',
         items: [
-          { text: 'Development Details', link: '/development' },
+          { text: 'Development Handbook', link: '/development-handbook' },
+          { text: 'Version Bumping', link: '/bumping-the-version' },
+          { text: 'About CI CD', link: '/about-ci-cd' },
         ],
       }
     ],
