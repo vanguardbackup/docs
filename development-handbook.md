@@ -4,7 +4,7 @@
 
 Welcome to the Vanguard Development Guide! We're happy that you're interested in contributing to Vanguard.
 
-Thanks for your interest in contributing to Vanguard. This guide will help you:
+This guide will help you:
 
 1. Set up your development environment
 2. Understand our contribution process
