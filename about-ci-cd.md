@@ -43,5 +43,3 @@ As a developer, you'll primarily interact with the CI/CD system when you push co
 
 2. **Environment Variables**: Ensure all necessary environment variables are correctly set in GitHub Secrets.
 
-3. **Deployment Failures**: Check application logs and Rollbar for detailed error information if a deployment fails.
-
