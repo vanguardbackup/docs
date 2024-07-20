@@ -1,4 +1,4 @@
-# Commands
+# CLI Commands
 
 Vanguard has several commands that are designed to be run, however most commands for Vanguard are for internal use and for the scheduler. Below are commands that **can** be manually ran:
 

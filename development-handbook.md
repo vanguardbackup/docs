@@ -1,14 +1,20 @@
-# Vanguard Development Handbook
+# Vanguard Developer Handbook
 
 ## 1. Introduction
 
-Welcome to the Vanguard Development Guide! We're thrilled that you're interested in contributing to Vanguard, our open-source backup management solution.
+Welcome to the Vanguard Development Guide! We're happy that you're interested in contributing to Vanguard.
 
-This guide is designed to help you set up your development environment, understand our contribution process, and get you started on your journey to becoming a Vanguard contributor.
+Thanks for your interest in contributing to Vanguard. This guide will help you:
+
+1. Set up your development environment
+2. Understand our contribution process
+3. Start contributing to Vanguard effectively
+
+We aim to make your onboarding process smooth and productive. Let's get started!
 
 ### What is Vanguard?
 
-Vanguard is a robust backup management system designed to simplify and streamline the process of managing backups. Our goal is to provide a reliable, user-friendly solution that helps individuals protect their data.
+Vanguard is an open-source backup solution for servers and applications. Built with Laravel, it's designed by the community for the community to simplify data protection.
 
 In the following sections, we'll guide you through setting up your development environment, understanding our workflow, and making your first contribution. Let's get started!
 
@@ -27,7 +33,7 @@ Before you begin, ensure you have the following installed on your system:
 
 ### Development Environments
 
-While you can use any development environment you're comfortable with, we recommend the following options for a smooth Vanguard development experience:
+While you can use any development environment you're comfortable with, we recommend the following options for a smooth development experience:
 
 #### Laravel Valet (macOS)
 
@@ -59,7 +65,7 @@ Regardless of your chosen environment, ensure it meets Vanguard's PHP version an
 1. Fork the Vanguard repository on GitHub.
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/vanguard.git
+   git clone https://github.com/vanguardbackup/vanguard.git
    cd vanguard
    ```
 3. Install PHP dependencies:
@@ -120,33 +126,57 @@ Congratulations! You've successfully set up your Vanguard development environmen
 
 ## 4. Code Quality and Standards
 
-We use several tools to maintain high code quality:
+Vanguard employs several tools to maintain high code quality:
 
-- **Duster**: An automated code formatting tool that ensures consistent coding style across the project. It combines the functionality of TLint, PHP_CodeSniffer,  PhpCsFixer and Laravel Pint to automatically fix coding standard violations.
+### Quality Assurance Tools
 
-- **PHPStan**: Performs static analysis to catch potential errors and improve code quality.
+1. **Duster**: Automated code formatter combining TLint, PHP_CodeSniffer, PhpCsFixer, and Laravel Pint to enforce consistent coding style.
 
-- **Rector**: A tool for instant upgrades and automated refactoring of PHP code.
+2. **PHPStan**: Static analysis tool to detect potential errors and improve code quality.
 
-- **Husky**: Runs pre-commit hooks for linting and testing, ensuring that only quality code is committed.
+3. **Rector**: Performs instant upgrades and automated refactoring of PHP code.
 
-- **GitHub Actions**: Automates CI/CD processes on PR submissions, running tests and checks automatically.
+4. **Husky**: Executes pre-commit hooks for linting and testing, ensuring only quality code is committed.
 
-::: tip
-Husky is configured to automatically run code quality checks before each commit. However, you can also run these checks manually:
+5. **GitHub Actions**: Automates CI/CD processes, running tests and checks on PR submissions.
+
+### Automated Pre-commit Checks
+
+Husky runs these checks before each commit:
+
+- PHPStan (Static analysis)
+- Pest (PHP testing framework)
+- Dusk (Browser testing)
+- Rector (Code refactoring)
+- Duster (Code formatting)
+- Front-end asset build
+
+### Manual Quality Checks
+
+Developers can run these checks locally:
 
 ```bash
-# Run Duster to automatically fix coding style issues
-./vendor/bin/duster fix
-
-# Run PHPStan for static analysis
+# Static analysis
 ./vendor/bin/phpstan analyse
 
-# Run Rector to check for potential automated refactorings
+# Pest test suite
+./vendor/bin/pest --parallel
+
+# Dusk test suite
+php artisan dusk --dirty
+
+# Check for potential refactorings
 ./vendor/bin/rector process --dry-run
+
+# Fix coding style issues
+./vendor/bin/duster fix
+
+# Npm asset building
+npm install && npm run build
 ```
 
-Running these commands helps catch and fix common issues before they are caught by the pre-commit script or by our CI system.
+:::tip
+Running these checks locally helps catch and fix issues before they're flagged by the pre-commit script or CI system, streamlining the development process.
 :::
 
 ## 5. Testing
@@ -175,12 +205,12 @@ For browser testing, we use [Laravel Dusk](https://laravel.com/docs/dusk). This 
 
 ### Importance of Testing
 
-Testing is not an afterthought in Vanguard—it's an integral part of our development process:
+Testing is integral to Vanguard's development process:
 
-1. **Quality Assurance**: Tests help catch bugs early and prevent regressions.
-2. **Documentation**: Tests serve as executable documentation of how components should behave.
-3. **Refactoring Confidence**: A solid test suite allows for easier refactoring and optimization.
-4. **CI/CD**: Our continuous integration pipeline runs all tests, ensuring only quality code is merged.
+1. **Quality Assurance**: Catches bugs early and prevents regressions.
+2. **Living Documentation**: Tests demonstrate expected behavior of project components.
+3. **Refactoring Confidence**: Enables easier refactoring and optimization.
+4. **CI/CD**:  Our CI pipeline runs all tests before merging.
 
 ::: tip
 Aim for high test coverage, but focus on testing critical paths and edge cases rather than aiming for an arbitrary coverage percentage.
@@ -225,7 +255,7 @@ Remember to keep your English strings consistent across the codebase. This makes
 
 ## 7. Commit Guidelines
 
-We follow a structured commit message format to maintain a clear and traceable history. Our commit messages should:
+We use structured commit messages for a clear, traceable history. Each commit should:
 
 1. Start with a type prefix (e.g., `fix:`, `feat:`, `refactor:`)
 2. Be no longer than 50 characters
@@ -244,10 +274,10 @@ Husky is configured to run a pre-commit hook that checks your commit messages ag
 - Ends with a period
 - Follows our formatting rules
 
-If your commit doesn't meet these criteria, the script will attempt to fix the commit automatically, however you may need to modify it yourself if it fails.
+The script attempts to auto-fix non-compliant commits, but manual edits may be needed.
 :::
 
-This structured approach to commits helps in generating changelogs, understanding the nature of changes, and maintaining a clean project history.
+This approach aids in changelog generation, change tracking, and maintaining a clean history.
 
 This script runs automatically before each local commit. To ensure it functions properly, verify that Husky hooks are activated in your development environment.
 
@@ -256,7 +286,7 @@ This script runs automatically before each local commit. To ensure it functions 
 
 ## 8. Documentation
 
-Maintaining up-to-date and comprehensive documentation is crucial for the success of Vanguard. This section outlines our documentation practices and guidelines.
+Maintaining up-to-date and comprehensive documentation is important. This section outlines our documentation practices and guidelines.
 
 ### Updating Documentation
 
@@ -264,16 +294,15 @@ Maintaining up-to-date and comprehensive documentation is crucial for the succes
 
 2. **Where to Update**:
    - In-code documentation: Update docblocks and comments in the codebase.
-   - User guide: Update the user guide in the `docs` folder.
+   - The documentation site (this website!) at the GitHub repository [here](https://github.com/vanguardbackup/docs/).
 
-3. **Documentation PRs**: Submit documentation changes as part of your feature PRs or as separate PRs for larger updates.
+3. **Documentation PRs**: Submit Pull Requests to [this repository](https://github.com/vanguardbackup/docs/) when necessary. The repositories are separate.
 
 ### Documentation Best Practices
 
 1. **Clear and Concise**: Write in simple, easy-to-understand language.
 2. **Keep it Current**: Regularly review and update existing documentation.
 3. **Accessibility**: Ensure documentation is accessible, including proper heading structure and alt text for images.
-
 
 ## 9. Tips & Tricks
 

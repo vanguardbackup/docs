@@ -1,6 +1,6 @@
-# Vanguard Version Checking
+# Version Management
 
-Keeping your Vanguard installation up-to-date is crucial for ensuring optimal performance, security, and access to the latest features. This guide explains how to check your Vanguard version and verify if updates are available.
+Keeping your installation up-to-date is crucial for ensuring optimal performance, security, and access to the latest features. This guide explains how to check your Vanguard version and verify if updates are available.
 
 ## Checking Your Current Version
 

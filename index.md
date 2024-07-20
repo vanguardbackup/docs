@@ -1,6 +1,6 @@
 # Welcome to Vanguard
 
-Welcome to the official documentation for Vanguard, an open-source backup tool.
+Welcome to the official documentation for Vanguard, an open-source backup solution for servers and applications.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/vanguardbackup/assets/main/screenshots/backup-tasks.png" width="900" alt="Screenshot"></p>
@@ -28,4 +28,4 @@ Use the sidebar to navigate through our documentation and learn about Vanguard's
 - Notification Streams
 - And more!
 
-Thank you for choosing Vanguard. We're excited to help you keep your data safe and secure!
+We appreciate your interest in Vanguard. Our goal is to provide robust data protection for your servers and applications.

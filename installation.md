@@ -1,6 +1,6 @@
-# Vanguard Installation Instructions
+# Vanguard Installation Guide
 
-Vanguard is a Laravel application that incorporates Reverb for web sockets, Horizon for background jobs, and Pulse for data monitoring. This guide will walk you through the installation process.
+Vanguard is built on Laravel and integrates Reverb for web sockets, Horizon for job processing, and Pulse for monitoring. This guide covers the step-by-step installation process.
 
 ## Prerequisites
 
