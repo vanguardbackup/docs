@@ -93,7 +93,7 @@ php artisan migrate:fresh --seed
 
 ### Running the Application
 
-1. Start the development server:
+1. Start the development server (skip if using Valet/Herd):
    ```bash
    php artisan serve
    ```
@@ -320,16 +320,15 @@ Adhering to best practices ensures that Vanguard remains maintainable, efficient
    - Use eager loading to prevent N+1 query problems.
    - Index frequently queried columns.
 2. **Caching**: Implement caching for expensive operations or frequently accessed data.
-3. **Asynchronous Processing**: Use Laravel's queue system for time-consuming tasks.
+3. **Asynchronous Processing**: Use Laravel's [queue system](https://laravel.com/docs/11.x/queues) for time-consuming tasks.
 
 ### Security Best Practices
 
 1. **Input Validation**: Always validate and sanitize user input.
 2. **Authentication and Authorization**: Use Laravel's built-in authentication system and Gates/Policies for authorization.
-3. **CSRF Protection**: Ensure CSRF tokens are used for all POST, PUT, PATCH, and DELETE requests.
-4. **Avoid Raw SQL**: Use Eloquent or Query Builder to prevent SQL injection.
-5. **Encrypt Sensitive Data**: Always encrypt sensitive information like passwords, API keys, and personal data before storing in the database. Use Laravel's built-in encryption features.
-6. **Secure Remote Commands**: When writing commands that will run on remote servers, be extremely cautious. Validate and sanitize all inputs, use the principle of the least privilege, and avoid passing sensitive data as command-line arguments.
+3. **Avoid Raw SQL**: Use Eloquent throughout the project unless you need to perform a complex query that cannot be done with Eloquent in a clean manner.
+4. **Encrypt Sensitive Data**: Always encrypt sensitive information like passwords and API keys before storing in the database. Use [Laravel's built-in encryption features](https://laravel.com/docs/11.x/encryption).
+5. **Remote Commands**: When writing commands that will run on remote servers with phpseclib, be extremely cautious. Validate and sanitize all inputs, use the principle of the least privilege, and avoid passing sensitive data as command-line arguments.
 
 ### General Tips
 

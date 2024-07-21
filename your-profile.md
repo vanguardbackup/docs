@@ -1,6 +1,6 @@
-# Account Options
+# Your Profile
 
-Your Vanguard account options allow you to personalize your experience and manage key account details. Here's what you can control:
+Your Vanguard profile allow you to personalize your experience and manage key account details. Here's what you can control:
 
 ## Personal Information
 - **Name**: Update your display name
@@ -17,12 +17,12 @@ Your Vanguard account options allow you to personalize your experience and manag
 ## Security
 - **Password**: Change your account password to maintain account security
 
-## Accessing Account Options
+## Accessing Your Profile
 
 1. Log into your Vanguard account
 2. Click on your profile icon or name in the top-right corner
 3. Select "Profile" from the dropdown menu
 
 ::: tip
-Remember to save your changes after making any updates to your account options.
+Remember to save your changes after making any updates to your profile.
 :::

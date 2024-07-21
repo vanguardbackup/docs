@@ -45,7 +45,7 @@ export default defineConfig({
       {
         text: 'User Features',
         items: [
-          { text: 'Managing Your Account', link: '/account-options' },
+          { text: 'Managing Your Account', link: '/your-profile' },
           { text: 'Removing Your Account', link: '/account-removal' },
         ],
       },

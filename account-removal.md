@@ -18,13 +18,13 @@ Vanguard allows you to remove your account if needed. However, it's important to
 
 ## Important Steps
 
-1. Before removing your account:
-    - Ensure you have local access to all important backups.
-    - Note down the servers where Vanguard has SSH access.
 
-2. After removing your account:
-    - Manually remove Vanguard's SSH keys from all your servers.
-    - Verify that no scheduled Vanguard tasks are running on your systems.
+1. Pre-Account Deletion Checklist:
+   - Verify local availability of all crucial backups.
+   - Document all servers where Vanguard possesses SSH access.
+
+2. Post-Account Deletion Tasks:
+   - Remove Vanguard's SSH keys from each of your servers.
 
 
 ::: warning
