@@ -8,8 +8,10 @@ Vanguard has several commands that are designed to be run, however most commands
 | `vanguard:version`              | `php artisan vanguard:version`                      | Displays the current version of Vanguard.                       | Use `--check` flag to check for newer versions on GitHub.                                        |
 | `vanguard:validate-s3-connection {id}` | `php artisan vanguard:validate-s3-connection {id}` | Validates the connection to an S3 backup destination.           | Replace `{id}` with the primary key of the backup destination.                                   |
 
-> [!NOTE]
-> The `vanguard:generate-ssh-key` command can only be run once. You will not be allowed to generate another SSH key if one is already configured.
+::: info Note
+The `vanguard:generate-ssh-key` command can only be run once. You will not be allowed to generate another SSH key if one is already configured.
+:::
 
-> [!WARNING]
-> There are other commands used internally by Vanguard's scheduler. These are not intended for manual execution and should be left to the system to manage.
+::: warning
+There are other commands used internally by Vanguard's scheduler. These are not intended for manual execution and should be left to the system to manage.
+:::

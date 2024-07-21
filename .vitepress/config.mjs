@@ -11,7 +11,8 @@ export default defineConfig({
   ],
   base: "/",
   outDir: 'dist',
-  lastUpdated: true,
+  lastUpdated: false,
+  cleanUrls: true,
   themeConfig: {
     logo: '/logo.svg',
     siteTitle: false,
