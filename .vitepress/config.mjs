@@ -3,6 +3,12 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Vanguard Documentation",
   description: "Documentation for Vanguard - the open-source backup solution for server and application backup, built by the community for the community.",
+  head: [
+    [
+      'script',
+      { defer: true, src: 'https://cloud.umami.is/script.js', 'data-website-id': 'dddc4318-80d9-454a-b9dc-5930195672e4' }
+    ]
+  ],
   base: "/",
   outDir: 'dist',
   lastUpdated: true,
@@ -21,6 +27,8 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Website', link: 'https://vanguardbackup.com' },
+      { text: 'Project Repo', link: 'https://github.com/vanguardbackup/vanguard' }
     ],
     sidebar: [
       {
