@@ -337,3 +337,37 @@ Adhering to best practices ensures that Vanguard remains maintainable, efficient
 3. **Commit Often**: Make small, frequent commits with clear messages.
 
 By following these best practices, you'll contribute to keeping Vanguard's codebase clean, efficient, and secure.
+
+## 10. Examples
+
+Here is an example of how you would contact a remote server and run a command on it. The GitHub Repository is always the best place for up-to-date, real examples of the code used in Vanguard.
+
+```php
+<?php
+
+namespace Example;
+
+use App\Facades\ServerConnection;
+use App\Models\RemoteServer;
+use App\Support\ServerConnection\Exceptions\ConnectionException;
+use Log;
+
+class ExampleClass {
+    
+    /**
+     * @param RemoteServer $remoteServer The remote server model.
+     * @return void
+     * @throws ConnectionException
+     */
+    public function interactWithServer(RemoteServer $remoteServer): void
+    {
+        $serverConnection = ServerConnection::connectFromModel($remoteServer)
+            ->establish();
+
+        $commandOutput = $serverConnection->run('whoami');
+        
+        // Send the command output to Laravel's native logger etc.
+        Log::debug($commandOutput);
+    }
+}
+```
