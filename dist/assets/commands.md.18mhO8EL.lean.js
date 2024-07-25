@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a,a4 as o}from"./chunks/framework.DFYgEw_e.js";const _=JSON.parse('{"title":"CLI Commands","description":"","frontmatter":{},"headers":[],"relativePath":"commands.md","filePath":"commands.md"}'),d={name:"commands.md"},n=o("",5),r=[n];function s(c,i,l,h,m,u){return a(),t("div",null,r)}const g=e(d,[["render",s]]);export{_ as __pageData,g as default};

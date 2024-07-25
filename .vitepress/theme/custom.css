@@ -593,3 +593,56 @@ body {
 .VPNavBar, .VPNavBarTitle {
     border-bottom: none !important;
 }
+
+.VPNavBarHamburger.hamburger {
+    background-color: transparent;
+    border: none;
+}
+
+.VPNavBarHamburger.hamburger .container .top,
+.VPNavBarHamburger.hamburger .container .middle,
+.VPNavBarHamburger.hamburger .container .bottom {
+    background-color: white;
+}
+
+.VPNavBarHamburger.hamburger:hover .container .top,
+.VPNavBarHamburger.hamburger:hover .container .middle,
+.VPNavBarHamburger.hamburger:hover .container .bottom {
+    background-color: #e0e0e0; /* Slightly darker on hover for visual feedback */
+}
+
+/* VitePress Mobile Social Link Styles */
+
+.VPNavScreen .VPNavScreenSocialLinks.social-links {
+    margin-top: 20px;
+}
+
+.VPNavScreen .VPNavScreenSocialLinks.social-links .VPSocialLink {
+    color: #1e1e1e; /* Dark gray, adjust as needed */
+    background-color: rgb(18, 17, 17); /* Slight background for better visibility */
+    border-radius: 50%; /* Circular background */
+    padding: 8px; /* Adjust padding as needed */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Style the icon inside the link */
+.VPNavScreen .VPNavScreenSocialLinks.social-links .VPSocialLink .vpi-social-github {
+    /* Adjust size if needed */
+    font-size: 20px;
+}
+
+/* Hover effect */
+.VPNavScreen .VPNavScreenSocialLinks.social-links .VPSocialLink:hover {
+    background-color: rgba(60, 60, 60, 0.2); /* Darker background on hover */
+    transform: scale(1.1); /* Slight increase in size on hover */
+}
+
+/* Dark mode styles (if needed) */
+.dark .VPNavScreen .VPNavScreenSocialLinks.social-links .VPSocialLink {
+    color: #ffffff; /* White for dark mode */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .VPNavScreen .VPNavScreenSocialLinks.social-links .VPSocialLink:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
