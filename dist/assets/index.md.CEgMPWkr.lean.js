@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as t,a4 as r}from"./chunks/framework.DAF-xrV5.js";const m=JSON.parse('{"title":"Welcome to Vanguard","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),o={name:"index.md"},n=r("",12),i=[n];function s(u,l,d,c,p,h){return t(),e("div",null,i)}const f=a(o,[["render",s]]);export{m as __pageData,f as default};
