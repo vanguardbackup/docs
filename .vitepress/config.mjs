@@ -36,7 +36,7 @@ export default defineConfig({
     siteTitle: false,
     logoLink: '/',
     sitemap: {
-      hostname: 'https://docs.vanguardbackup.com'
+      hostname: 'https://docs.vanguardbackup.com/'
     },
     search: {
       provider: 'local',
