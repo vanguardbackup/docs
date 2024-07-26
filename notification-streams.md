@@ -4,17 +4,18 @@ Notification Streams in Vanguard keep you informed about the status of your Back
 
 ## Supported Notification Channels
 
-Vanguard currently supports three types of Notification Streams:
+Vanguard currently supports four types of Notification Streams:
 
 1. Discord Webhooks
 2. Email Notifications
 3. Slack Webhooks
+4. Microsoft Teams Webhooks
 
 ## Setting Up Notification Streams
 
 1. Navigate to the Notification Streams section in your Vanguard dashboard.
 2. Choose your preferred notification channel.
-3. Configure the necessary details (e.g., webhook URL for Discord or Slack, email addresses for email notifications).
+3. Configure the necessary details (e.g., webhook URL for Discord, Slack or Teams, email addresses for email notifications).
 4. Save your configuration.
 
 ## Applying Notifications
