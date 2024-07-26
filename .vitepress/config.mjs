@@ -3,7 +3,25 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Vanguard Documentation",
   description: "Documentation for Vanguard - the open-source backup solution for server and application backup, built by the community for the community.",
+  lang: 'en-US',
   head: [
+    ['meta', { name: 'theme-color', content: '#000000' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
+    ['link', { rel: 'mask-icon', href: '/mask-icon.svg', color: '#000000' }],
+    ['meta', { name: 'og:type', content: 'website' }],
+    ['meta', { name: 'og:title', content: 'Vanguard Documentation' }],
+    ['meta', { name: 'og:description', content: 'Documentation for Vanguard - the open-source backup solution for server and application backup.' }],
+    ['meta', { name: 'og:image', content: 'https://docs.vanguardbackup.com/og-image.jpg' }],
+    ['meta', { name: 'og:url', content: 'https://docs.vanguardbackup.com' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'Vanguard Documentation' }],
+    ['meta', { name: 'twitter:description', content: 'Documentation for Vanguard - the open-source backup solution for server and application backup.' }],
+    ['meta', { name: 'twitter:image', content: 'https://docs.vanguardbackup.com/og-image.jpg' }],
+    ['meta', { name: 'keywords', content: 'vanguard, backup, server backup, application backup, open-source' }],
+    ['link', { rel: 'canonical', href: 'https://docs.vanguardbackup.com' }],
     [
       'script',
       { defer: true, src: 'https://cloud.umami.is/script.js', 'data-website-id': 'dddc4318-80d9-454a-b9dc-5930195672e4' }
@@ -31,6 +49,10 @@ export default defineConfig({
       { text: 'Website', link: 'https://vanguardbackup.com' },
       { text: 'Project Repo', link: 'https://github.com/vanguardbackup/vanguard' }
     ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024 Vanguard Backup'
+    },
     sidebar: [
       {
         text: 'Getting Started',
@@ -81,7 +103,7 @@ export default defineConfig({
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vanguardbackup/docs' }
-    ]
+    ],
   },
   vue: {
     template: {
