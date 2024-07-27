@@ -49,10 +49,6 @@ export default defineConfig({
       { text: 'Website', link: 'https://vanguardbackup.com' },
       { text: 'Project Repo', link: 'https://github.com/vanguardbackup/vanguard' }
     ],
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024 Vanguard Backup'
-    },
     sidebar: [
       {
         text: 'Getting Started',
