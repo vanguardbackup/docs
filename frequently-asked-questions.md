@@ -24,6 +24,18 @@ Vanguard operates remotely, so no installation is needed on your servers. You ju
 ### How often can I schedule backups?
 You can schedule backups at any frequency using cron expressions, from every minute to once a year or any custom schedule in between. We suggest using a tool like [Crontab Guru](https://crontab.guru/) to help you generate cron expressions.
 
+### Does Vanguard support incremental backups?
+No, Vanguard currently only supports full backups. Each backup operation creates a complete copy of the specified files and directories.
+
+### Is there a file size limit for backups?
+Yes, Vanguard imposes a 50GB size limit on individual files during backups. This limit helps ensure that backup tasks can complete within their allocated time window, as each backup operation has a maximum duration. Files exceeding this size will be skipped to prevent backups from timing out.
+
+### How long can a backup task run?
+Backup tasks have a timeout limit of 30 minutes. If a backup operation exceeds this time limit, it will be terminated, and you will be notified that the backup has failed.
+
+### Does Vanguard use compression for backups?
+Yes, Vanguard automatically compresses to reduce the size of backup files. This helps to minimize storage costs and transfer times.
+
 ### Can I backup databases?
 Yes, Vanguard supports backing up MySQL and PostgreSQL databases.
 
