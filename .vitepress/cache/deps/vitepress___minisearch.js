@@ -1448,7 +1448,7 @@ var MiniSearch = class _MiniSearch {
     const { boostDocument, weights, maxFuzzy, bm25: bm25params } = options;
     const { fuzzy: fuzzyWeight, prefix: prefixWeight } = Object.assign(Object.assign({}, defaultSearchOptions.weights), weights);
     const data = this._index.get(query.term);
-    const results = this.termResults(query.term, query.term, 1, data, boosts, boostDocument, bm25params);
+    const results = this.termResults(query.term, query.term, 1, query.termBoost, data, boosts, boostDocument, bm25params);
     let prefixMatches;
     let fuzzyMatches;
     if (query.prefix) {
@@ -1468,7 +1468,7 @@ var MiniSearch = class _MiniSearch {
         }
         fuzzyMatches === null || fuzzyMatches === void 0 ? void 0 : fuzzyMatches.delete(term);
         const weight = prefixWeight * term.length / (term.length + 0.3 * distance);
-        this.termResults(query.term, term, weight, data2, boosts, boostDocument, bm25params, results);
+        this.termResults(query.term, term, weight, query.termBoost, data2, boosts, boostDocument, bm25params, results);
       }
     }
     if (fuzzyMatches) {
@@ -1478,7 +1478,7 @@ var MiniSearch = class _MiniSearch {
           continue;
         }
         const weight = fuzzyWeight * term.length / (term.length + distance);
-        this.termResults(query.term, term, weight, data2, boosts, boostDocument, bm25params, results);
+        this.termResults(query.term, term, weight, query.termBoost, data2, boosts, boostDocument, bm25params, results);
       }
     }
     return results;
@@ -1562,7 +1562,7 @@ var MiniSearch = class _MiniSearch {
   /**
    * @ignore
    */
-  termResults(sourceTerm, derivedTerm, termWeight, fieldTermData, fieldBoosts, boostDocumentFn, bm25params, results = /* @__PURE__ */ new Map()) {
+  termResults(sourceTerm, derivedTerm, termWeight, termBoost, fieldTermData, fieldBoosts, boostDocumentFn, bm25params, results = /* @__PURE__ */ new Map()) {
     if (fieldTermData == null)
       return results;
     for (const field of Object.keys(fieldBoosts)) {
@@ -1585,7 +1585,7 @@ var MiniSearch = class _MiniSearch {
         const termFreq = fieldTermFreqs.get(docId);
         const fieldLength = this._fieldLength.get(docId)[fieldId];
         const rawScore = calcBM25Score(termFreq, matchingFields, this._documentCount, fieldLength, avgFieldLength, bm25params);
-        const weightedScore = termWeight * fieldBoost * docBoost * rawScore;
+        const weightedScore = termWeight * termBoost * fieldBoost * docBoost * rawScore;
         const result = results.get(docId);
         if (result) {
           result.score += weightedScore;
@@ -1766,7 +1766,8 @@ var calcBM25Score = (termFreq, matchingCount, totalCount, fieldLength, avgFieldL
 var termToQuerySpec = (options) => (term, i, terms) => {
   const fuzzy = typeof options.fuzzy === "function" ? options.fuzzy(term, i, terms) : options.fuzzy || false;
   const prefix = typeof options.prefix === "function" ? options.prefix(term, i, terms) : options.prefix === true;
-  return { term, fuzzy, prefix };
+  const termBoost = typeof options.boostTerm === "function" ? options.boostTerm(term, i, terms) : 1;
+  return { term, fuzzy, prefix, termBoost };
 };
 var defaultOptions = {
   idField: "id",

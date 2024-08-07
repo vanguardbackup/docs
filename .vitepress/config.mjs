@@ -79,7 +79,73 @@ export default defineConfig({
       {
         text: 'API Reference',
         items: [
-          { text: 'API Overview', link: '/api' }
+          { text: 'Introduction', link: '/api/introduction' },
+          { text: 'Authentication', link: '/api/authentication' },
+          {
+            text: 'Backup Tasks',
+            collapsed: true,
+            items: [
+              { text: 'List Backup Tasks', link: '/api/backup-tasks#list-backup-tasks' },
+              { text: 'Create Backup Task', link: '/api/backup-tasks#create-backup-task' },
+              { text: 'Show Backup Task', link: '/api/backup-tasks#show-backup-task' },
+              { text: 'Update Backup Task', link: '/api/backup-tasks#update-backup-task' },
+              { text: 'Delete Backup Task', link: '/api/backup-tasks#delete-backup-task' },
+              { text: 'Get Backup Task Status', link: '/api/backup-tasks#get-backup-task-status' },
+              { text: 'Get Latest Backup Task Log', link: '/api/backup-tasks#get-latest-backup-task-log' },
+              { text: 'Run Backup Task', link: '/api/backup-tasks#run-backup-task' },
+            ]
+          },
+          {
+            text: 'Backup Destinations',
+            collapsed: true,
+            items: [
+              { text: 'List Backup Destinations', link: '/api/backup-destinations#list-backup-destinations' },
+              { text: 'Create Backup Destination', link: '/api/backup-destinations#create-backup-destination' },
+              { text: 'Show Backup Destination', link: '/api/backup-destinations#show-backup-destination' },
+              { text: 'Update Backup Destination', link: '/api/backup-destinations#update-backup-destination' },
+              { text: 'Delete Backup Destination', link: '/api/backup-destinations#delete-backup-destination' },
+            ]
+          },
+          {
+            text: 'Remote Servers',
+            collapsed: true,
+            items: [
+              { text: 'List Remote Servers', link: '/api/remote-servers#list-remote-servers' },
+              { text: 'Create Remote Server', link: '/api/remote-servers#create-remote-server' },
+              { text: 'Show Remote Server', link: '/api/remote-servers#show-remote-server' },
+              { text: 'Update Remote Server', link: '/api/remote-servers#update-remote-server' },
+              { text: 'Delete Remote Server', link: '/api/remote-servers#delete-remote-server' },
+            ]
+          },
+          {
+            text: 'Notification Streams',
+            collapsed: true,
+            items: [
+              { text: 'List Notification Streams', link: '/api/notification-streams#list-notification-streams' },
+              { text: 'Create Notification Stream', link: '/api/notification-streams#create-notification-stream' },
+              { text: 'Show Notification Stream', link: '/api/notification-streams#show-notification-stream' },
+              { text: 'Update Notification Stream', link: '/api/notification-streams#update-notification-stream' },
+              { text: 'Delete Notification Stream', link: '/api/notification-streams#delete-notification-stream' },
+            ]
+          },
+          {
+            text: 'Tags',
+            collapsed: true,
+            items: [
+              { text: 'List Tags', link: '/api/tags#list-tags' },
+              { text: 'Create Tag', link: '/api/tags#create-tag' },
+              { text: 'Show Tag', link: '/api/tags#show-tag' },
+              { text: 'Update Tag', link: '/api/tags#update-tag' },
+              { text: 'Delete Tag', link: '/api/tags#delete-tag' },
+            ]
+          },
+          {
+            text: 'User',
+            collapsed: true,
+            items: [
+              { text: 'Get Current User', link: '/api/user#get-current-user' },
+            ]
+          },
         ]
       },
       {

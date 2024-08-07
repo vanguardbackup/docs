@@ -7527,7 +7527,7 @@ function useModel(props, name, options = EMPTY_OBJ) {
   const modifiers = getModelModifiers(props, name);
   const res = customRef((track2, trigger2) => {
     let localValue;
-    let prevSetValue;
+    let prevSetValue = EMPTY_OBJ;
     let prevEmittedValue;
     watchSyncEffect(() => {
       const propValue = props[name];
@@ -7542,7 +7542,7 @@ function useModel(props, name, options = EMPTY_OBJ) {
         return options.get ? options.get(localValue) : localValue;
       },
       set(value) {
-        if (!hasChanged(value, localValue)) {
+        if (!hasChanged(value, localValue) && !(prevSetValue !== EMPTY_OBJ && hasChanged(value, prevSetValue))) {
           return;
         }
         const rawProps = i.vnode.props;
@@ -7553,7 +7553,7 @@ function useModel(props, name, options = EMPTY_OBJ) {
         }
         const emittedValue = options.set ? options.set(value) : value;
         i.emit(`update:${name}`, emittedValue);
-        if (value !== emittedValue && value !== prevSetValue && emittedValue === prevEmittedValue) {
+        if (hasChanged(value, emittedValue) && hasChanged(value, prevSetValue) && !hasChanged(emittedValue, prevEmittedValue)) {
           trigger2();
         }
         prevSetValue = value;
@@ -9024,8 +9024,6 @@ function createComponentInstance(vnode, parent, suspense) {
     refs: EMPTY_OBJ,
     setupState: EMPTY_OBJ,
     setupContext: null,
-    attrsProxy: null,
-    slotsProxy: null,
     // suspense related
     suspense,
     suspenseId: suspense ? suspense.pendingId : 0,
@@ -9303,12 +9301,12 @@ var attrsProxyHandlers = true ? {
   }
 };
 function getSlotsProxy(instance) {
-  return instance.slotsProxy || (instance.slotsProxy = new Proxy(instance.slots, {
+  return new Proxy(instance.slots, {
     get(target, key) {
       track(instance, "get", "$slots");
       return target[key];
     }
-  }));
+  });
 }
 function createSetupContext(instance) {
   const expose = (exposed) => {
@@ -9336,12 +9334,13 @@ function createSetupContext(instance) {
   };
   if (true) {
     let attrsProxy;
+    let slotsProxy;
     return Object.freeze({
       get attrs() {
         return attrsProxy || (attrsProxy = new Proxy(instance.attrs, attrsProxyHandlers));
       },
       get slots() {
-        return getSlotsProxy(instance);
+        return slotsProxy || (slotsProxy = getSlotsProxy(instance));
       },
       get emit() {
         return (event, ...args) => instance.emit(event, ...args);
@@ -9636,7 +9635,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-var version = "3.4.32";
+var version = "3.4.34";
 var warn2 = true ? warn$1 : NOOP;
 var ErrorTypeStrings = ErrorTypeStrings$1;
 var devtools = true ? devtools$1 : void 0;
@@ -10236,7 +10235,7 @@ function patchAttr(el, key, value, isSVG, instance, isBoolean2 = isSpecialBoolea
 }
 function patchDOMProp(el, key, value, parentComponent) {
   if (key === "innerHTML" || key === "textContent") {
-    if (value === null) return;
+    if (value == null) return;
     el[key] = value;
     return;
   }
@@ -11420,7 +11419,7 @@ export {
 
 @vue/shared/dist/shared.esm-bundler.js:
   (**
-  * @vue/shared v3.4.32
+  * @vue/shared v3.4.34
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -11428,14 +11427,14 @@ export {
 
 @vue/reactivity/dist/reactivity.esm-bundler.js:
   (**
-  * @vue/reactivity v3.4.32
+  * @vue/reactivity v3.4.34
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 
 @vue/runtime-core/dist/runtime-core.esm-bundler.js:
   (**
-  * @vue/runtime-core v3.4.32
+  * @vue/runtime-core v3.4.34
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -11443,7 +11442,7 @@ export {
 
 @vue/runtime-dom/dist/runtime-dom.esm-bundler.js:
   (**
-  * @vue/runtime-dom v3.4.32
+  * @vue/runtime-dom v3.4.34
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -11451,9 +11450,9 @@ export {
 
 vue/dist/vue.runtime.esm-bundler.js:
   (**
-  * vue v3.4.32
+  * vue v3.4.34
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 */
-//# sourceMappingURL=chunk-2LNMD3C2.js.map
+//# sourceMappingURL=chunk-WFWRDC73.js.map
