@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a4 as e}from"./chunks/framework.Caa1YTU6.js";const u=JSON.parse('{"title":"User Endpoint","description":"","frontmatter":{},"headers":[],"relativePath":"api/user.md","filePath":"api/user.md"}'),t={name:"api/user.md"},n=e("",14),l=[n];function h(p,k,o,r,d,E){return a(),i("div",null,l)}const g=s(t,[["render",h]]);export{u as __pageData,g as default};

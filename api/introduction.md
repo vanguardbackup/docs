@@ -26,12 +26,12 @@ For authentication details, including how to obtain and use API tokens, please r
 
 You can find documentation for the endpoints below:
 
-- [Backup Tasks](/api/backup-tasks/)
-- [Backup Destinations](/api/backup-destinations/)
-- [Remote Servers](/api/remote-servers/)
-- [Notification Streams](/api/notification-streams/)
-- [Tags](/api/tags/)
-- [User](/api/user/)
+- [Backup Tasks](/api/backup-tasks)
+- [Backup Destinations](/api/backup-destinations)
+- [Remote Servers](/api/remote-servers)
+- [Notification Streams](/api/notification-streams)
+- [Tags](/api/tags)
+- [User](/api/user)
 
 ## Rate Limiting
 

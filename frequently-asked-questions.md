@@ -102,6 +102,6 @@ For security-related issues:
 Alternatively, for critical issues, you can email security@vanguardbackup.com.
 
 ### Is there an API available for Vanguard?
-Currently, Vanguard does not offer an API.
+Vanguard does offer an API. You can read more about it by visiting the [API Introduction](api/introduction) page.
 
 If you have a question that's not answered here, please make a post on our [GitHub Discussions page](https://github.com/vanguardbackup/vanguard/discussions).

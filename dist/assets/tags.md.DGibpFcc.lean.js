@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as i,a4 as t}from"./chunks/framework.DAF-xrV5.js";const h=JSON.parse('{"title":"Tags","description":"","frontmatter":{},"headers":[],"relativePath":"tags.md","filePath":"tags.md"}'),s={name:"tags.md"},n=t("",12),o=[n];function r(l,c,g,d,p,u){return i(),e("div",null,o)}const _=a(s,[["render",r]]);export{h as __pageData,_ as default};

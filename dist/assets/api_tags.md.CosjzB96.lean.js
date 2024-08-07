@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a4 as t}from"./chunks/framework.Caa1YTU6.js";const u=JSON.parse('{"title":"Tag Endpoints","description":"","frontmatter":{},"headers":[],"relativePath":"api/tags.md","filePath":"api/tags.md"}'),n={name:"api/tags.md"},e=t("",41),h=[e];function l(p,k,E,o,r,d){return a(),i("div",null,h)}const c=s(n,[["render",l]]);export{u as __pageData,c as default};
