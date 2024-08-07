@@ -8,7 +8,8 @@ This guide provides step-by-step instructions for installing Vanguard, a web app
 - PHP 8.1 or higher
 - Composer
 - Node.js and npm
-- MySQL or PostgreSQL database
+- PostgreSQL database
+- Redis
 - Open ports for SSH connections on destination servers
 
 ## Step-by-Step Installation
@@ -18,22 +19,20 @@ This guide provides step-by-step instructions for installing Vanguard, a web app
    git clone https://github.com/vanguardbackup/vanguard vanguard
    cd vanguard
    ```
-
-2. **Install PHP Dependencies**
-   ```bash
-   composer install
-   ```
-
-3. **Set Up Environment File**
+2. **Set Up Environment File**
    ```bash
    cp .env.example .env
    ```
    Edit the `.env` file to configure your environment:
    - Set database credentials (`DB_*` variables)
-   - Configure `REVERB_HOST` and `REVERB_PORT`
    - Add your email to `ADMIN_EMAIL_ADDRESSES` (comma-separated for multiple)
-   - Set `SSH_PASSPHRASE` for SSH key generation
+   - Set `SSH_PASSPHRASE` for your SSH key passphrase
 
+3. **Install PHP Dependencies**
+   ```bash
+   composer install
+   ```
+   
 4. **Generate Application Key**
    ```bash
    php artisan key:generate
@@ -44,13 +43,18 @@ This guide provides step-by-step instructions for installing Vanguard, a web app
    php artisan migrate
    ```
 
-6. **Install and Compile Frontend Dependencies**
+6. **Generate SSH Key**
    ```bash
-   npm install
-   npm run dev
+   php artisan vanguard:generate-ssh-key
    ```
 
-7. **Configure GitHub Login (Optional)**
+7. **Install and Compile Frontend Dependencies**
+   ```bash
+   npm install
+   npm run build
+   ```
+
+8. **Configure GitHub Login (Optional)**
    If you want to enable GitHub login:
    - Create a new GitHub OAuth App at https://github.com/settings/developers
    - Set the Authorization callback URL to `http://your-app-url/auth/github/callback`
@@ -59,27 +63,18 @@ This guide provides step-by-step instructions for installing Vanguard, a web app
      GITHUB_CLIENT_ID=your_github_client_id
      GITHUB_CLIENT_SECRET=your_github_client_secret
      ```
-
-8. **Configure Flare for Error Handling**
-   Vanguard uses Flare for error tracking. Update your `.env` file with your Flare API key:
-   ```
-   FLARE_KEY=your_flare_api_key
-   ```
-
-9. **Generate SSH Key**
-   ```bash
-   php artisan vanguard:generate-ssh-key
-   ```
-
-10. **Set Up Reverb for Web Sockets**
+     
+9. **Set Up Reverb for Web Sockets**
     ```bash
     php artisan reverb:start
     ```
+Please update your `.env` accordingly, set your domain etc and the ports that Reverb will use. Please see the [Reverb](https://reverb.laravel.com/) website for more details. 
 
-11. **Start the Development Server**
+10. **Start Horizon**
     ```bash
-    php artisan serve
+    php artisan horizon
     ```
+By default, Vanguard will use Horizon to process background jobs such as backup tasks. It is important that Horizon is started for the jobs to be queued.
 
 Your Vanguard application should now be accessible at `http://localhost:8000` (or the URL provided by the `serve` command).
 
