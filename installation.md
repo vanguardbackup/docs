@@ -68,7 +68,7 @@ This guide provides step-by-step instructions for installing Vanguard, a web app
     ```bash
     php artisan reverb:start
     ```
-Please update your `.env` accordingly, set your domain etc and the ports that Reverb will use. Please see the [Reverb](https://reverb.laravel.com/) website for more details. 
+   Please update your `.env` accordingly, set your domain etc and the ports that Reverb will use. Please see the [Reverb](https://reverb.laravel.com/) website for more details. 
 
 10. **Start Horizon**
     ```bash
