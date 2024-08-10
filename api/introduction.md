@@ -42,6 +42,14 @@ The API is rate-limited to prevent abuse. Current limits are:
 
 If you exceed these limits, you'll receive a 429 Too Many Requests response.
 
+## SDKs
+
+To make integration easier, Vanguard provides official SDKs for popular programming languages. Currently, we support:
+
+- PHP SDK: [GitHub Repository](https://github.com/vanguardbackup/vanguard-php-sdk)
+
+These SDKs provide a convenient wrapper around our API, handling authentication, request formatting, and response parsing for you. We recommend using them when available for your preferred language.
+
 ## Best Practices
 
 1. **Use appropriate scopes**: Only request the minimal set of permissions your application needs. See the [Authentication documentation](/api/authentication#available-scopes) for details on available scopes.
