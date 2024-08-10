@@ -31,6 +31,62 @@ Content-Type: application/json
 Authorization: Bearer YOUR_API_TOKEN
 ```
 
+## Device Endpoint Authentication
+
+Vanguard provides a dedicated endpoint for device authentication, primarily used for mobile apps and other client applications. This endpoint allows you to obtain an API token using email and password credentials.
+
+### Enabling the Device Authentication Endpoint
+
+The device authentication endpoint is disabled by default for security reasons. To enable it, set the following environment variable in your `.env` file:
+
+```
+ENABLE_DEVICE_AUTH_ENDPOINT=true
+```
+
+### Endpoint Details
+
+- **URL**: `/api/sanctum/token`
+- **Method**: POST
+- **Content-Type**: application/json
+
+### Required Fields
+
+| Field       | Type   | Description                           |
+|-------------|--------|---------------------------------------|
+| email       | string | The email address of the user         |
+| password    | string | The user's password                   |
+| device_name | string | A name to identify the device |
+
+### Example Request
+
+```http
+POST /api/sanctum/token HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "user@example.com",
+    "password": "your_secure_password",
+    "device_name": "iPhone 16 Pro"
+}
+```
+
+### Example Response
+
+If the authentication is successful, you'll receive a JSON response with a token:
+
+```json
+{
+    "token": "1|EBu8jQmpsplYoakc4Nt2PMw4jkabRAhKEBn5Zhxs"
+}
+```
+
+Use this token in the `Authorization` header for subsequent API requests, as described in the "Using Your API Token" section above.
+
+### Error Responses
+
+- If the credentials are incorrect, you'll receive a 422 Unprocessable Entity response with validation errors.
+- If the device authentication endpoint is disabled, you'll receive a 404 Not Found response.
+
 ## Available Scopes
 
 API tokens can have limited permissions to enhance security. Ensure your token has the necessary scopes for the operations you intend to perform. Available scopes are:
