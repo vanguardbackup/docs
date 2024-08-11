@@ -96,6 +96,15 @@ export default defineConfig({
             ]
           },
           {
+            text: 'Backup Task Logs',
+            collapsed: true,
+            items: [
+              { text: 'List Backup Task Logs', link: '/api/backup-task-logs#list-backup-task-logs' },
+              { text: 'Show Backup Task Log', link: '/api/backup-task-logs#show-backup-task-log' },
+              { text: 'Delete Backup Task Log', link: '/api/backup-task-logs#delete-backup-task-log' },
+            ]
+          },
+          {
             text: 'Backup Destinations',
             collapsed: true,
             items: [
@@ -145,8 +154,8 @@ export default defineConfig({
             items: [
               { text: 'Get Current User', link: '/api/user#get-current-user' },
             ]
-          },
-        ]
+          }
+      ]
       },
       {
         text: 'For Developers',

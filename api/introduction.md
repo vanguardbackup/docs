@@ -27,6 +27,7 @@ For authentication details, including how to obtain and use API tokens, please r
 You can find documentation for the endpoints below:
 
 - [Backup Tasks](/api/backup-tasks)
+- [Backup Task Logs](/api/backup-task-logs)
 - [Backup Destinations](/api/backup-destinations)
 - [Remote Servers](/api/remote-servers)
 - [Notification Streams](/api/notification-streams)
