@@ -32,7 +32,8 @@ Retrieve a paginated listing of the user's backup tasks.
       },
       "schedule": {
         "frequency": "daily",
-        "time": "01:00",
+        "scheduled_utc_time": "01:00",
+        "scheduled_local_time": "21:00",
         "custom_cron": null
       },
       "storage": {
@@ -40,8 +41,12 @@ Retrieve a paginated listing of the user's backup tasks.
         "appended_filename": "daily_backup",
         "path": "/backups"
       },
+      "notification_streams_count": 2,
       "status": "ready",
       "has_isolated_credentials": true,
+      "last_run_local_time": "2024-08-06 21:00:00",
+      "last_run_utc_time": "2024-08-07T01:00:00Z",
+      "paused_at": null,
       "created_at": "2024-08-07T00:00:00Z",
       "updated_at": "2024-08-07T00:00:00Z"
     }
@@ -106,7 +111,8 @@ Create a new backup task.
     },
     "schedule": {
       "frequency": "weekly",
-      "time": "02:00",
+      "scheduled_utc_time": "02:00",
+      "scheduled_local_time": "22:00",
       "custom_cron": null
     },
     "storage": {
@@ -114,8 +120,12 @@ Create a new backup task.
       "appended_filename": null,
       "path": "/backups/weekly"
     },
+    "notification_streams_count": 0,
     "status": "ready",
     "has_isolated_credentials": false,
+    "last_run_local_time": null,
+    "last_run_utc_time": null,
+    "paused_at": null,
     "created_at": "2024-08-07T00:00:00Z",
     "updated_at": "2024-08-07T00:00:00Z"
   }
@@ -147,7 +157,8 @@ Retrieve details of a specific backup task.
     },
     "schedule": {
       "frequency": "daily",
-      "time": "01:00",
+      "scheduled_utc_time": "01:00",
+      "scheduled_local_time": "21:00",
       "custom_cron": null
     },
     "storage": {
@@ -155,8 +166,12 @@ Retrieve details of a specific backup task.
       "appended_filename": "daily_backup",
       "path": "/backups"
     },
+    "notification_streams_count": 2,
     "status": "ready",
     "has_isolated_credentials": true,
+    "last_run_local_time": "2024-08-06 21:00:00",
+    "last_run_utc_time": "2024-08-07T01:00:00Z",
+    "paused_at": null,
     "created_at": "2024-08-07T00:00:00Z",
     "updated_at": "2024-08-07T00:00:00Z"
   }
@@ -198,7 +213,8 @@ Update an existing backup task.
     },
     "schedule": {
       "frequency": "weekly",
-      "time": "03:00",
+      "scheduled_utc_time": "03:00",
+      "scheduled_local_time": "23:00",
       "custom_cron": null
     },
     "storage": {
@@ -206,8 +222,12 @@ Update an existing backup task.
       "appended_filename": null,
       "path": "/backups/weekly"
     },
+    "notification_streams_count": 0,
     "status": "ready",
     "has_isolated_credentials": false,
+    "last_run_local_time": null,
+    "last_run_utc_time": null,
+    "paused_at": null,
     "created_at": "2024-08-07T00:00:00Z",
     "updated_at": "2024-08-07T01:00:00Z"
   }

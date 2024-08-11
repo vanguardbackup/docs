@@ -22,6 +22,7 @@ Retrieve a paginated listing of the user's notification streams.
       "user_id": 1,
       "label": "Email Notifications",
       "type": "email",
+      "type_human": "Email",
       "notifications": {
         "on_success": true,
         "on_failure": true
@@ -77,6 +78,7 @@ Create a new notification stream.
     "user_id": 1,
     "label": "Slack Notifications",
     "type": "slack",
+    "type_human": "Slack",
     "notifications": {
       "on_success": true,
       "on_failure": true
@@ -102,6 +104,7 @@ Retrieve details of a specific notification stream.
     "user_id": 1,
     "label": "Email Notifications",
     "type": "email",
+    "type_human": "Email",
     "notifications": {
       "on_success": true,
       "on_failure": true
@@ -139,6 +142,7 @@ Update an existing notification stream.
     "user_id": 1,
     "label": "Updated Email Notifications",
     "type": "email",
+    "type_human": "Email",
     "notifications": {
       "on_success": false,
       "on_failure": true
@@ -202,3 +206,6 @@ or
 - The `type` field in the create and update requests must be one of: `email`, `discord`, `slack`, `teams`, or `pushover`.
 - The `value` field should contain the appropriate destination for the chosen notification type (e.g., email address, webhook URL).
 - The `notifications` object allows you to specify whether to receive notifications for successful backups (`on_success`) and failed backups (`on_failure`).
+- The `type_human` field provides a human-readable version of the notification stream type.
+- The `notifications.on_success` field corresponds to `receive_successful_backup_notifications` in the backend.
+- The `notifications.on_failure` field corresponds to `receive_failed_backup_notifications` in the backend.

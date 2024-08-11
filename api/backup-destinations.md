@@ -22,6 +22,7 @@ Retrieve a paginated listing of the user's backup destinations.
       "user_id": 1,
       "label": "AWS S3 Backup",
       "type": "s3",
+      "type_human": "Amazon S3",
       "s3_bucket_name": "my-backups",
       "path_style_endpoint": false,
       "s3_region": "us-west-2",
@@ -76,6 +77,7 @@ Create a new backup destination.
     "user_id": 1,
     "label": "Custom S3 Backup",
     "type": "custom_s3",
+    "type_human": "Custom S3",
     "s3_bucket_name": "custom-backups",
     "path_style_endpoint": true,
     "s3_endpoint": "https://custom-s3.example.com",
@@ -100,6 +102,7 @@ Retrieve details of a specific backup destination.
     "user_id": 1,
     "label": "AWS S3 Backup",
     "type": "s3",
+    "type_human": "Amazon S3",
     "s3_bucket_name": "my-backups",
     "path_style_endpoint": false,
     "s3_region": "us-west-2",
@@ -133,6 +136,7 @@ Update an existing backup destination.
     "user_id": 1,
     "label": "Updated S3 Backup",
     "type": "s3",
+    "type_human": "Amazon S3",
     "s3_bucket_name": "new-backups",
     "path_style_endpoint": false,
     "s3_region": "us-west-2",
@@ -175,3 +179,13 @@ or
   "message": "You are not authorized to access this backup destination"
 }
 ```
+
+## Notes on JSON Structure
+
+1. The `type_human` field is included in all responses, providing a human-readable version of the backup destination type.
+2. For non-local backup destinations (i.e., S3 or custom S3), the following fields are included:
+    - `s3_bucket_name`
+    - `path_style_endpoint`
+3. For Amazon S3 (`type: "s3"`), the `s3_region` field is included.
+4. For Custom S3 (`type: "custom_s3"`), the `s3_endpoint` field is included.
+5. Local backup destinations (`type: "local"`) do not include S3-specific fields.
