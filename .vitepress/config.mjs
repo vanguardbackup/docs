@@ -74,6 +74,7 @@ export default defineConfig({
         items: [
           { text: 'Managing Your Account', link: '/your-profile' },
           { text: 'Removing Your Account', link: '/account-removal' },
+          { text: 'Mobile Application', link: '/mobile-app' },
         ],
       },
       {
