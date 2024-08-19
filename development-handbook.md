@@ -371,3 +371,79 @@ class ExampleClass {
     }
 }
 ```
+
+## 11. Feature Flags
+
+Vanguard uses feature flags to manage the rollout of new features and conduct experiments. We utilize [Laravel Pennant](https://laravel.com/docs/11.x/pennant) for implementing feature flags in our application.
+
+### What are Feature Flags?
+
+Feature flags (also known as feature toggles) allow us to enable or disable features in our application without deploying new code. This approach provides several benefits:
+
+1. Gradual rollout of new features
+2. Easy rollback if issues are discovered
+3. Ability to test features in production with a limited audience
+
+### Using Laravel Pennant
+
+Laravel Pennant provides a simple, expressive API for working with feature flags. Here's a basic example of how we use feature flags in Vanguard:
+
+```php
+// Using a feature flag
+if (Feature::active('new-dashboard')) {
+    return view('new-dashboard');
+}
+
+return view('old-dashboard');
+```
+
+For more detailed information on using Laravel Pennant, refer to the [official documentation](https://laravel.com/docs/11.x/pennant).
+
+### Criteria for Feature Flags
+
+When deciding whether to implement a feature flag, consider the following criteria:
+
+1. **Impact**: Will the feature significantly change user experience or system behavior?
+2. **Risk**: Is there a potential for the feature to cause issues in production?
+3. **Scope**: Does the feature affect a large portion of the codebase or user base?
+4. **Testing**: Would it be beneficial to test the feature with a subset of users before full rollout?
+
+If a feature meets one or more of these criteria, it's a good candidate for a feature flag.
+
+### Experiments Manager
+
+Vanguard includes an Experiments Manager, accessible to all users, where feature flags can be toggled on or off. This interface allows for easy management of feature flags without requiring code changes.
+
+In Vanguard, we define features using an array that includes additional metadata. This approach allows us to pass more data to the Experiments Manager, providing a richer interface for managing features. Here's how we define features:
+
+```php
+private function defineFeatures(): void
+{
+    $features = [
+        'navigation-redesign' => [
+            'title' => 'Navigation Redesign',
+            'description' => 'A new, more intuitive navigation structure for improved user experience.',
+            'group' => 'UI/UX',
+            'icon' => 'heroicon-o-bars-3',
+        ],
+        'advanced-search' => [
+            'title' => 'Advanced Search',
+            'description' => 'Enhanced search functionality with filters and sorting options.',
+            'group' => 'Search',
+            'icon' => 'heroicon-o-magnifying-glass',
+        ],
+        // Add more features as needed
+    ];
+}
+```
+The Experiments Manager can then use this data to create a user-friendly interface for toggling features and displaying relevant information about each feature.
+
+### Best Practices
+
+1. **Clean Code**: Avoid deeply nested conditionals based on feature flags. Instead, use separate methods or classes for different feature versions.
+2. **Temporary Nature**: Remember that feature flags should be temporary. Once a feature is fully rolled out and stable, remove the associated flag.
+3. **Testing**: Write tests for both the enabled and disabled states of a feature flag.
+4. **Documentation**: Keep an up-to-date list of active feature flags and their purposes.
+5. **Metadata Management**: When adding new features, ensure that all necessary metadata fields are included to provide a comprehensive view in the Experiments Manager.
+
+By following these guidelines and utilizing the rich metadata approach, we can effectively use feature flags to improve our development process and user experience in Vanguard, while maintaining an informative Experiments Manager.

@@ -76,6 +76,7 @@ export default defineConfig({
           { text: 'Removing Your Account', link: '/account-removal' },
           { text: 'Mobile Application', link: '/mobile-app' },
           { text: 'Two Factor Auth', link: '/two-factor-auth' },
+          { text: 'Experiments', link: '/experiments'}
         ],
       },
       {
