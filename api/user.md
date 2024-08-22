@@ -23,7 +23,6 @@ Retrieve information about the currently authenticated user.
       "timezone": "UTC",
       "language": "en",
       "is_admin": false,
-      "github_login_enabled": true,
       "weekly_summary_enabled": true
     },
     "backup_tasks": {
@@ -60,7 +59,6 @@ Retrieve information about the currently authenticated user.
     - `timezone`: User's preferred timezone.
     - `language`: User's preferred language.
     - `is_admin`: Boolean indicating whether the user has admin privileges.
-    - `github_login_enabled`: Boolean indicating if GitHub login is enabled for the user.
     - `weekly_summary_enabled`: Boolean indicating if the user has opted in for weekly summaries.
 - `backup_tasks`: Object containing backup task statistics.
     - `total`: Total number of backup tasks for the user.
