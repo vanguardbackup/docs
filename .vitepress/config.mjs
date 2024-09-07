@@ -152,6 +152,13 @@ export default defineConfig({
             ]
           },
           {
+            text: 'Public SSH Key',
+            collapsed: true,
+            items: [
+              { text: 'Show Public SSH Key', link: '/api/public-ssh-key#retrieve-ssh-public-key' },
+            ]
+          },
+          {
             text: 'User',
             collapsed: true,
             items: [
