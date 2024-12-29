@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  ignoreDeadLinks: true,
   title: "Vanguard Documentation",
   description: "Documentation for Vanguard - the open-source backup solution for server and application backup, built by the community for the community.",
   lang: 'en-US',

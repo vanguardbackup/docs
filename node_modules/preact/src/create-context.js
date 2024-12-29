@@ -8,18 +8,18 @@ export function createContext(defaultValue, contextId) {
 	const context = {
 		_id: contextId,
 		_defaultValue: defaultValue,
-		/** @type {FunctionComponent} */
+		/** @type {import('./internal').FunctionComponent} */
 		Consumer(props, contextValue) {
 			// return props.children(
 			// 	context[contextId] ? context[contextId].props.value : defaultValue
 			// );
 			return props.children(contextValue);
 		},
-		/** @type {FunctionComponent} */
+		/** @type {import('./internal').FunctionComponent} */
 		Provider(props) {
 			if (!this.getChildContext) {
-				/** @type {Component[] | null} */
-				let subs = [];
+				/** @type {Set<import('./internal').Component> | null} */
+				let subs = new Set();
 				let ctx = {};
 				ctx[contextId] = this;
 
@@ -31,7 +31,7 @@ export function createContext(defaultValue, contextId) {
 
 				this.shouldComponentUpdate = function (_props) {
 					if (this.props.value !== _props.value) {
-						subs.some(c => {
+						subs.forEach(c => {
 							c._force = true;
 							enqueueRender(c);
 						});
@@ -39,11 +39,11 @@ export function createContext(defaultValue, contextId) {
 				};
 
 				this.sub = c => {
-					subs.push(c);
+					subs.add(c);
 					let old = c.componentWillUnmount;
 					c.componentWillUnmount = () => {
 						if (subs) {
-							subs.splice(subs.indexOf(c), 1);
+							subs.delete(c);
 						}
 						if (old) old.call(c);
 					};

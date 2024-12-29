@@ -66,7 +66,7 @@ We welcome contributions to improve Vanguard's documentation! If you notice any 
 
 ## License
 
-Vanguard's documentation is licensed under the MIT Licence. See the [LICENCE](LICENSE) file for more details.
+Vanguard's documentation is licensed under the MIT Licence. See the [LICENSE](LICENSE) file for more details.
 
 ## Security
 
