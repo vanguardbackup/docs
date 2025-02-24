@@ -5,7 +5,7 @@ This guide provides step-by-step instructions for installing Vanguard, a web app
 
 ## Prerequisites
 
-- PHP 8.1 or higher
+- PHP 8.3 or higher
 - Composer
 - Node.js and npm
 - PostgreSQL database
