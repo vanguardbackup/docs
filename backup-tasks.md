@@ -69,8 +69,10 @@ For security, tokens can be re-generated per Backup Task. You will find an optio
 
 ### Example Webhook Trigger (cURL)
 
+This is using the official instance's URL, however if you're self-hosting Vanguard please swap this out for yours.
+
 ```bash
-curl -X POST "https://your-domain.com/webhooks/backup-tasks/123/run?token=your-webhook-token" \
+curl -X POST "https://app.vanguardbackup.com/webhooks/backup-tasks/123/run?token=your-webhook-token" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
