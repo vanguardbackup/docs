@@ -51,8 +51,42 @@ Backup Tasks that are paused will not be scheduled and cannot be run manually.
 ### Backup Task History
 A log is created for every backup task execution, regardless of its outcome, providing a comprehensive audit trail.
 
+## Automated Triggering via Webhook
+
+Each Backup Task can be triggered using a secure webhook URL. This feature allows for flexible integration with external systems such as CI/CD pipelines.
+
+### Where is it?
+
+The webhook URL can be found by clicking the 'View Webhook URL' button located on the 'Backup Tasks' page. Click the button to bring up the modal.
+
+For security, tokens can be re-generated per Backup Task. You will find an option to do this in the modal.
+
+### Webhook Request Details
+
+- **Method**: POST only
+- **Authentication**: Token is embedded in the URL itself
+- **Rate Limit**: 10 requests per minute per backup task
+
+### Example Webhook Trigger (cURL)
+
+```bash
+curl -X POST "https://your-domain.com/webhooks/backup-tasks/123/run?token=your-webhook-token" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+### Possible Response Scenarios
+
+| Status Code | Meaning |
+|------------|---------|
+| 202 | Backup task initiated successfully |
+| 403 | Invalid authentication token |
+| 409 | Task cannot be run (paused or conflicting) |
+| 429 | Rate limit exceeded |
+
 ## Next Steps
 
 After creating a Backup Task:
 - Run the task manually to verify its configuration
 - Monitor its execution in the Vanguard dashboard
+- Set up integrations using the webhook if needed
