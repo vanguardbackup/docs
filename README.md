@@ -1,79 +1,55 @@
 # Vanguard Documentation
 
-Welcome to the official documentation for Vanguard, an open-source Laravel application for managing remote server backups.
+Documentation for Vanguard, an open-source Laravel application for managing remote server backups.
 
-## About Vanguard
+## About
 
-Vanguard is a powerful tool that allows users to:
-1. Connect to remote Linux servers
-2. Facilitate backups from these servers to various destinations (e.g., S3 buckets)
-3. Enable both scheduled and manual backup operations
+Vanguard enables users to connect to remote Linux servers, create backups to various destinations (S3, etc.), and run scheduled or manual backup operations.
 
-## Documentation Platform
+## Development
 
-Our documentation is powered by [VitePress](https://vitepress.dev/), a static site generator designed for building fast, content-focused websites.
-
-## Getting Started
+This documentation uses [VitePress](https://vitepress.dev/).
 
 ### Prerequisites
 
-- Node.js (version 18 or higher)
+- Node.js (v20+)
 - npm or yarn
 
-### Installation
+### Quick Start
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/vanguardbackup/docs.git
-   cd docs
-   ```
+```bash
+# Install dependencies
+npm install
 
-2. Install dependencies:
-   ```
-   npm install
-   # or
-   yarn install
-   ```
+# Development server
+npm run docs:dev
 
-3. Start the development server:
-   ```
-   npm run docs:dev
-   # or
-   yarn docs:dev
-   ```
+# Build for production
+npm run docs:build
+```
 
-4. Build for production:
-   ```
-   npm run docs:build
-   # or
-   yarn docs:build
-   ```
+## Structure
 
-## Documentation Structure
-
-- `/docs`: Contains all markdown files for the documentation
-- `/docs/.vitepress`: VitePress configuration and theme customization
-- `/public`: Static assets like images and icons
+- `/`: Documentation markdown files
+- `/.vitepress`: Configuration and theme
+- `/api`: API markdown files
+- `/public`: Static assets
 
 ## Contributing
 
-We welcome contributions to improve Vanguard's documentation! If you notice any mistakes, areas for improvement, or want to add new content:
-
+To contribute:
 1. Fork the repository
-2. Create a new branch for your changes
-3. Make your improvements
-4. Submit a pull request with a clear description of your changes
+2. Create a branch for your changes
+3. Submit a pull request
 
 ## License
 
-Vanguard's documentation is licensed under the MIT Licence. See the [LICENSE](LICENSE) file for more details.
+MIT License. See the [LICENSE](LICENSE) file.
 
 ## Security
 
-If you discover a security vulnerability within the documentation or the Vanguard application itself, please follow our [security policy](https://github.com/vanguardbackup/vanguard/blob/main/SECURITY.md). Do not disclose security-related issues publicly until they have been addressed by the Vanguard team.
+Please report security vulnerabilities according to our [security policy](https://github.com/vanguardbackup/vanguard/blob/main/SECURITY.md).
 
 ## Support
 
-For questions, suggestions, or help with the documentation please open an issue in this repository.
-
-Thank you for contributing to Vanguard's documentation.
+For questions or suggestions, please open an issue in this repository.
