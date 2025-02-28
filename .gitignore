@@ -1,0 +1,41 @@
+# dependencies
+node_modules/
+/.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# build output
+dist/
+.vitepress/dist/
+.vitepress/cache/
+.output/
+.temp/
+
+# IDE and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+cache/
+.vitepress/cache
+.vitepress/.temp
+
+# Misc
+*.local
+.tmp
+dist-ssr
