@@ -4,7 +4,7 @@
 
 Retrieve the public SSH key for the Vanguard instance. This key can be used for SSH authentication when connecting to remote servers.
 
-**GET** `/api/vanguard/ssh-key`
+**GET** `/api/ssh-key`
 
 ### Prerequisites
 
