@@ -69,6 +69,35 @@ Retrieve a paginated listing of the user's backup tasks.
 }
 ```
 
+## List Upcoming Backup Tasks
+
+Retrieve a listing of the user's upcoming backup tasks.
+
+**GET** `/api/backup-tasks/upcoming`
+
+### Response
+
+```json
+{
+  "data": [
+    {
+      "backup_task_id": "204",
+      "label": "Daily Database Backup",
+      "type": "Database",
+      "next_run": "2025-03-02T12:00:00Z",
+      "next_run_human": "Sunday, 2 March 2025 12:00"
+    },
+    {
+      "backup_task_id": "205",
+      "label": "Website Backup",
+      "type": "Database",
+      "next_run": "2025-03-03T00:00:00Z",
+      "next_run_human": "Monday, 3 March 2025 00:00"
+    }
+  ]
+}
+```
+
 ## Create Backup Task
 
 Create a new backup task.
