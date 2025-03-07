@@ -1,9 +1,5 @@
 # Tags
 
-::: warning
-This feature is currently under development.
-:::
-
 Tags in Vanguard provide an efficient way to organize and categorize your Backup Tasks. They allow for easy grouping and quick identification of related tasks.
 
 ## Creating Tags
